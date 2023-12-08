@@ -1,7 +1,11 @@
 import { CatCardProps } from "./CatCard";
 
 const base: CatCardProps = {
-  sampleText: 'Hello CatCard',
+  tag: 'Felines',
+  title: `What's new in Cats`,
+  subTitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!',
+  author: 'Alex',
+  time: '2h ago',
 }
 
 export const mockCatCardProps = {
