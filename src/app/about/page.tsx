@@ -35,12 +35,3 @@ return (
 };
 
 export default About;
-
-About.getLayout = (page: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) => {
-return (
-  <PrimaryLayout>
-    <SidebarLayout />
-    {page}
-  </PrimaryLayout>
-);
-};

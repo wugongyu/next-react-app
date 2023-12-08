@@ -2,9 +2,9 @@ import Image from 'next/image';
 import CatCard from '@/components/cards/cat/CatCard';
 import { mockCatCardProps } from '@/components/cards/cat/CatCard.mocks';
 import { NextPageWithLayout } from './page.d'
-import PrimaryLayout from '@/components/layouts/primary/PrimaryLayout';
-import SideBarLayout from '@/components/layouts/sidebar/SideBarLayout';
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
+// import PrimaryLayout from '@/components/layouts/primary/PrimaryLayout';
+// import SideBarLayout from '@/components/layouts/sidebar/SideBarLayout';
+// import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -30,11 +30,3 @@ const Home: NextPageWithLayout = () => {
   );
 }
 export default Home;
-Home.getLayout = (page: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) => {
-  return (
-    <PrimaryLayout>
-      <SideBarLayout />
-      {page}
-    </PrimaryLayout>
-  );
-};
