@@ -1,6 +1,6 @@
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
-import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
-import SidebarLayout from '../../components/layouts/sidebar/SidebarLayout';
+// import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
+// import SideBarLayout from '../../components/layouts/sidebar/SideBarLayout';
 import { NextPageWithLayout } from '../page.d';
 
 const About: NextPageWithLayout = () => {
