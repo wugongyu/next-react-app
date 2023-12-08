@@ -1,9 +1,9 @@
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 // import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
 // import SideBarLayout from '../../components/layouts/sidebar/SideBarLayout';
-import { NextPageWithLayout } from '../page.d';
+// import { NextPageWithLayout } from '../page.d';
 
-const About: NextPageWithLayout = () => {
+const About: React.FC<{}> = () => {
 return (
   <section>
     <h2>Layout Example (About)</h2>
