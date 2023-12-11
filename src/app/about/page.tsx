@@ -1,17 +1,11 @@
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
-// import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
-// import SideBarLayout from '../../components/layouts/sidebar/SideBarLayout';
-// import { NextPageWithLayout } from '../page.d';
-
 const About: React.FC<{}> = () => {
 return (
   <section>
     <h2>Layout Example (About)</h2>
     <p>
-      This example adds a property <code>getLayout</code> to your page,
-      allowing you to return a React component for the layout. This allows you
-      to define the layout on a per-page basis. Since we&apos;re returning a
-      function, we can have complex nested layouts if desired.
+      If you only have one layout for your entire application,
+      you can set the layout by the root layout.tsx file in app folder.
+      If you need multiple layouts, you can set the layout by each layout.tsx file in nested page folder.
     </p>
     <p>
       When navigating between pages, we want to persist page state (input
