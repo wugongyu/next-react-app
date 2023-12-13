@@ -6,7 +6,7 @@ export interface BaseTemplateProps {
 
 const BaseTemplate: React.FC<BaseTemplateProps> = ({sampleText}) => {
   return (
-    <div className={styles.container}>{sampleText}</div>
+    <div className={`${styles.container} bg-gradient-to-r from-cyan-500 to-blue-500`}>{sampleText}</div>
   );
 }
 
