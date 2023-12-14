@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const Home: React.FC<{}> = () => {
-  const { locale } = useRouter();
   return (
     <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
       <Image 
@@ -18,7 +17,7 @@ const Home: React.FC<{}> = () => {
       <Search />
       <p>
         Google offered in:{' '}
-        <Link href="/" locale={locale === 'en' ? 'fr' : 'en'} className="underline text-blue-600">
+        <Link href="/" className="underline text-blue-600">
           Français
         </Link>
       </p>
