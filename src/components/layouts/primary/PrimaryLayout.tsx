@@ -1,20 +1,26 @@
 import Head from 'next/head';
 import React from 'react';
-import styles from './PrimaryLayout.module.css';
+import Header from '../../navigation/header/Header';
+import Footer from '../../navigation/footer/Footer';
 
-export interface PrimaryLayoutProps {
-  children: React.ReactNode;
+export interface PrimaryLayoutProps extends React.ComponentPropsWithoutRef<'div'> {
+  justify?: 'items-center' | 'items-start';
 }
 
-const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({children}) => {
+const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({children, justify = 'items-center', ...divProps }) => {
   return (
     <>
       <Head>
         <title>primary layout</title>
       </Head>
-      <main className={styles.main}>
-        {children}
-      </main>
+      <div className={`min-h-screen w-full flex flex-col ${justify}`} {...divProps}>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <div className='m-auto' />
+        <Footer />
+      </div>
     </>
   );
 }

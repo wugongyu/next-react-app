@@ -1,7 +1,8 @@
 import type { Preview } from '@storybook/react';
-import '../src/app/globals.css';
 import * as NextImage from 'next/image';
 import React from 'react';
+import '../src/app/globals.css';
+
 
 // adding a handler so that Storybook can handle Next's <Image> component without crashing
 const BREAKPOINTS_INT = {
@@ -46,6 +47,9 @@ const preview: Preview = {
       },
     },
     viewport: { viewports: customViewports },
+    // nextRouter: {
+    //   Provider: RouterContext.Provider,
+    // },
   },
 };
 

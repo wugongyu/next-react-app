@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './Search.module.css';
 
 export interface SearchProps {
-  searchText: string;
+  searchText?: string;
 }
 
 const Search: React.FC<SearchProps> = (props) => {
   const { searchText } = props;
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState<string | undefined>('');
   useEffect(() => {
     setSearchTerm(searchText);
   }, [searchText])
@@ -18,7 +20,8 @@ const Search: React.FC<SearchProps> = (props) => {
         className="flex flex-col items-center gap-y-5"
         onSubmit={e=> {
           e.preventDefault();
-          alert('actionRequested, search for term:' + searchTerm);
+          // alert('actionRequested, search for term:' + searchTerm);
+          router.push(`/results?search=${searchTerm}`);
         }}
       >
         <input 
