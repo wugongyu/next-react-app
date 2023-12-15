@@ -1,3 +1,6 @@
+// useRouter only be used inside client component
+'use client'
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './Search.module.css';
@@ -9,9 +12,11 @@ export interface SearchProps {
 const Search: React.FC<SearchProps> = (props) => {
   const { searchText } = props;
   const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState<string | undefined>('');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   useEffect(() => {
-    setSearchTerm(searchText);
+    if(searchText) {
+      setSearchTerm(searchText)
+    }
   }, [searchText])
   return (
     <div>
@@ -34,7 +39,10 @@ const Search: React.FC<SearchProps> = (props) => {
           <button type='submit' className='btn-primary'>
             Google Search
           </button>
-          <button type='submit' className='btn-primary'>
+          <button
+            className='btn-primary'
+            onClick={() => alert('FEATURE COMING SOON!')}
+          >
             I&apos;m Feeling Lucky
           </button>
         </div>

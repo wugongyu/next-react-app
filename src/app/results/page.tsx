@@ -1,18 +1,29 @@
 import SearchResult, { SearchResultProps } from "@/components/utility/search-result/SearchResult";
-import { mockSearchResultProps } from "@/components/utility/search-result/SearchResult.mocks";
+import database from '@/lib/search/database.json';
 
+async function getData() {
+  // const res = await fetch('https://api.example.com/...')
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+ 
+  // if (!res.ok) {
+  //   // This will activate the closest `error.js` Error Boundary
+  //   throw new Error('Failed to fetch data')
+  // }
+  console.log(database);
+  return database;
+}
 
-const ResultsPage: React.FC<{}> = () => {
+export default async function ResultsPage() {
+  const data = await getData();
   return (
     <section>
-      {[...new Array(6)].map((item, index) => (
+      {[...data].map((item, index) => (
         <SearchResult
           key={index}
-          {...mockSearchResultProps.base as SearchResultProps}
+          {...item as SearchResultProps}
         />
       ))}
     </section>
   )
 }
-
-export default ResultsPage;

@@ -1,9 +1,6 @@
-'use client'
-
 import Search from '@/components/utility/search/Search';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 const Home: React.FC<{}> = () => {
   return (

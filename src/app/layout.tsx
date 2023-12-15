@@ -1,3 +1,5 @@
+// The root layout is a Server Component by default and can not be set to a Client Component.
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -18,7 +20,10 @@ export default function RootLayout({
   return (
     // Root layouts must contain html and body tags.
     <html lang="en">
-      <body className={inter.className}>
+      <body 
+        className={inter.className}
+        suppressHydrationWarning={true}
+      >
         <PrimaryLayout>
           {children}
         </PrimaryLayout>  
