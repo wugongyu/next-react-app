@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import PrimaryLayout from '@/components/layouts/primary/PrimaryLayout';
+import { AuthProvider } from '@/state/auth/AuthContext';
 // import SideBarLayout from '@/components/layouts/sidebar/SideBarLayout';
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,9 +25,11 @@ export default function RootLayout({
         className={inter.className}
         suppressHydrationWarning={true}
       >
-        <PrimaryLayout>
-          {children}
-        </PrimaryLayout>  
+        <AuthProvider>
+          <PrimaryLayout>
+            {children}
+          </PrimaryLayout>
+        </AuthProvider>
       </body>
     </html>
   );

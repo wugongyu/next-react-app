@@ -1,3 +1,4 @@
+import AuthButton from '../../../components/buttons/auth/AuthButton';
 import Link from 'next/link';
 import styles from './Header.module.css';
 
@@ -18,7 +19,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       <div className="space-x-5 m-5">
         <Link href="/" className="hover:underline hidden sm:inline">Email</Link>
         <Link href="/" className="hover:underline hidden sm:inline">Images</Link>
-        <button className="border-1 p-2 px-4 sm:px-6 rounded bg-blue-500 text-white">Sign in</button>
+        <AuthButton />
       </div>
     </header>
   );

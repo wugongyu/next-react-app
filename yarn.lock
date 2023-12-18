@@ -2022,6 +2022,18 @@
     polished "^4.2.2"
     uuid "^9.0.0"
 
+"@storybook/addon-actions@^7.6.5":
+  version "7.6.5"
+  resolved "https://registry.npmmirror.com/@storybook/addon-actions/-/addon-actions-7.6.5.tgz#276ed222cc038423cd5ee80441f88544a2663311"
+  integrity sha512-lW/m9YcaNfBZk+TZLxyzHdd563mBWpsUIveOKYjcPdl/q0FblWWZrRsFHqwLK1ldZ4AZXs8J/47G8CBr6Ew2uQ==
+  dependencies:
+    "@storybook/core-events" "7.6.5"
+    "@storybook/global" "^5.0.0"
+    "@types/uuid" "^9.0.1"
+    dequal "^2.0.2"
+    polished "^4.2.2"
+    uuid "^9.0.0"
+
 "@storybook/addon-backgrounds@7.6.3":
   version "7.6.3"
   resolved "https://registry.npmmirror.com/@storybook/addon-backgrounds/-/addon-backgrounds-7.6.3.tgz#4f4ca4ed998fb2267d2a056f8921a43d9869bff8"
@@ -2451,6 +2463,13 @@
   version "7.6.4"
   resolved "https://registry.npmmirror.com/@storybook/core-events/-/core-events-7.6.4.tgz#55405545dbc9ae5715654d2198ee1f1a3cc34ef7"
   integrity sha512-i3xzcJ19ILSy4oJL5Dz9y0IlyApynn5RsGhAMIsW+mcfri+hGfeakq1stNCo0o7jW4Y3A7oluFTtIoK8DOxQdQ==
+  dependencies:
+    ts-dedent "^2.0.0"
+
+"@storybook/core-events@7.6.5":
+  version "7.6.5"
+  resolved "https://registry.npmmirror.com/@storybook/core-events/-/core-events-7.6.5.tgz#bcac8a2625c1f63d290d4ca0b70bb7a953939750"
+  integrity sha512-zk2q/qicYXAzHA4oV3GDbIql+Kd4TOHUgDE8e4jPCOPp856z2ScqEKUAbiJizs6eEJOH4nW9Db1kuzgrBVEykQ==
   dependencies:
     ts-dedent "^2.0.0"
 
@@ -9624,13 +9643,6 @@ store2@^2.14.2:
   resolved "https://registry.npmmirror.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-storybook-addon-next-router@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.npmmirror.com/storybook-addon-next-router/-/storybook-addon-next-router-4.0.2.tgz#fb45a4b7d9c4f92cd63b509f4d378c51164aca7d"
-  integrity sha512-0rjGAl7HziW4ecDq+VU03H1dwkw5f6phqA+PMquPzdowNVl29ejVwVadLMGlovG6x2snaxMGxtySR2c5bwegSw==
-  dependencies:
-    tslib "2.4.0"
-
 storybook-css-modules-preset@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmmirror.com/storybook-css-modules-preset/-/storybook-css-modules-preset-1.1.1.tgz#30310eab3c324cb944ea760ecd73b5341bcae6c6"
@@ -10159,11 +10171,6 @@ tsconfig-paths@^4.0.0, tsconfig-paths@^4.1.2:
     json5 "^2.2.2"
     minimist "^1.2.6"
     strip-bom "^3.0.0"
-
-tslib@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 tslib@^1.13.0, tslib@^1.8.1:
   version "1.14.1"

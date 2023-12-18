@@ -2,6 +2,8 @@ import type { Preview } from '@storybook/react';
 import * as NextImage from 'next/image';
 import React from 'react';
 import '../src/app/globals.css';
+import { AuthProvider } from '../src/state/auth/AuthContext';
+
 
 
 // adding a handler so that Storybook can handle Next's <Image> component without crashing
@@ -37,6 +39,15 @@ const customViewports = Object.fromEntries(
 //   value: (props) => (<OriginalNextImage {...props} unoptimized />),
 // });
 
+// use decorators: export a const called decorators which React component(s) you want as a wrapper around all your stories.
+export const decorators = [
+  (Story: React.ReactNode) => (
+    <AuthProvider>
+      <Story />
+    </AuthProvider>
+  )
+]
+
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -47,9 +58,20 @@ const preview: Preview = {
       },
     },
     viewport: { viewports: customViewports },
+    // use this way before next.js 13
     // nextRouter: {
     //   Provider: RouterContext.Provider,
     // },
+
+    // by this way When using Next.js 13+
+    // If you have the actions addon,
+    // you can interact with the links and see the route change events there
+    nextjs: {
+      appDirectory: true,
+      router: {
+        basePath: '/',
+      },
+    }
   },
 };
 

@@ -4,7 +4,7 @@ import Search, { SearchProps } from './Search';
 import { mockSearchProps } from './Search.mocks';
 
 export default {
-  title: 'utility/search',
+  title: 'utility/Search',
   components: Search,
   argTypes: {}
 } as ComponentMeta<typeof Search>;
@@ -17,4 +17,12 @@ export const base = Template.bind({});
 base.args = {
   ...mockSearchProps.base,
 } as SearchProps;
+
+base.parameters = {
+  nextjs: {
+    router: {
+      basePath: '/',
+    },
+  },
+};
 
